@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Atlas";
+    src: url(AtlasGrotesk-Regular.otf);
+}
+
+* {
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  width: 100%;
+  height:100vh;
+  background-color: yellow;
+}
+
+#wrapper {
+  width: 90%;
+  margin: auto;
+  margin-top: 20%;
+}
+
+p {
+  text-align:center;
+  font-size: 100px;
+  font-family: 'Atlas';
+}
+
+button {
+  float: center;
+}
+
+@keyframes wave {
+  from { transform : translateY(0); color: white; }
+  to   { transform : translateY( $offset ); }
+}

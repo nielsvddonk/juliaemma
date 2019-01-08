@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+      <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+    <title>Lava</title>
+    
+
+
+  </head>
+  <body>
+  	<div id="wrapper">
+<p class="text-center" id="sentence"></p>
+<button id="newSentence">NEW</button>
+</div>
+  </body>
+
+  </html>
+
+  <script>
+function getSentence(){
+  var nbaleat = Math.floor(Math.random()*4);
+  switch (nbaleat){
+    case 0:
+      return "You're dumb";
+    case 1:
+      return "You're funny";
+    case 2:
+      return "You're awesome";
+    case 3:
+      return "I fuckin love you";
+      
+  }
+
+}
+
+function placeSentence(sentence){
+    $("#sentence").html(sentence);
+}
+
+$(document).ready(function() {
+  var sentence = getSentence();
+  placeSentence(sentence);
+  $("#newSentence").on('click', function() {
+    sentence = getSentence();
+    placeSentence(sentence);
+  });
+});
+    
+                  </script>
